@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccion de tema
+    </title>
+    <script>
+        function setThemeCookie(theme) {
+            document.cookie = `userTheme=${theme}; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Selecciona un tema:</h1>
+    <button onclick="setThemeCookie('light')">Tema Claro</button>
+    <button onclick="setThemeCookie('dark')">Tema Oscuro</button>
+
+    <p>La preferencia de tema se guardará en una cookie.</p>
+
+    <a href="view.html">Ir a la segunda página</a>
+</body>
+</html>

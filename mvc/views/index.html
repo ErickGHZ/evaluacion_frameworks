@@ -1,0 +1,25 @@
+<form action="/" method="post"  id="loginForm" onsubmit="return validarFormulario()">
+    <label for="username">Usuario:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Contraseña:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="Iniciar sesión">
+</form>
+
+<script>
+    function validarFormulario() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Verificar si el nombre de usuario y la contraseña son correctos
+        if (username === "admin" && password === "1234") {
+            // Si son correctos, establecer la cookie
+            document.cookie = "username=Erick; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            return true; // Permitir enviar el formulario
+        } else {
+            // Si son incorrectos, mostrar un mensaje de error y no enviar el formulario
+            alert("Usuario o contraseña incorrectos.");
+            return false; // No permitir enviar el formulario
+        }
+    }
+</script>
